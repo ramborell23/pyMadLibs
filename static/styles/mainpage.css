@@ -1,5 +1,6 @@
 body {
     font-size: 15px;
+    margin-bottom: 100px;
 }
 
 form div:nth-child(odd) {
@@ -14,20 +15,24 @@ form div:nth-child(even) {
 
 label.tooltip {
     background-color: orange;
-    padding: 20px;
+    padding: 10px;
     display: none;
+    border-radius: 25px;
+    position:absolute;
+    float: right;
+    left: 520px;
+    width: 30%;
 }
 
-div.label-wrapper {
-    
-}
+div.label-wrapper {}
+
 label.label-tag:hover+label.tooltip {
     display: block;
 }
 
 div.label-and-input {
-    display: flex;
-    flex-direction: rowx;
+    /* display: flex; */
+    /* flex-direction: rowx; */
     margin: 15px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
