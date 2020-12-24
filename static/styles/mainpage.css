@@ -1,3 +1,33 @@
-body{
-font-size: 125px;
+body {
+    font-size: 15px;
+}
+
+form div:nth-child(odd) {
+    background: red;
+    width: 50%;
+}
+
+form div:nth-child(even) {
+    background: green;
+    width: 50%;
+}
+
+label.tooltip {
+    background-color: orange;
+    padding: 20px;
+    display: none;
+}
+
+div.label-wrapper {
+    
+}
+label.label-tag:hover+label.tooltip {
+    display: block;
+}
+
+div.label-and-input {
+    display: flex;
+    flex-direction: rowx;
+    margin: 15px;
+    justify-content: space-between;
 }
