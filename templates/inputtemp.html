@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+  <title>Flask app</title>
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='styles/mainpage.css') }}"
+  />
+</head>
+<title>Hello from Flask</title>
+{% if name %}
+<body>
+  <h2>Welcome to</h2>
+  <h1>MadLibs</h1>
+  <h1>Hello {{ name }}!</h1>
+  <form action="{{ url_for('handle_madlibs_data')}}" method="post">
+    <div class="label-and-input">
+      <label class="label-tag" for="adjective1">Adjective:</label>
+      <label class="tooltip"
+        >Definition: Any member of a class of words that modify nouns and
+        pronouns, primarily by describing a particular quality of the word they
+        are modifying, as wise in a wise grandmother, or perfect in a perfect
+        score, or handsome in He is extremely handsome.
+      </label>
+      <input type="text" id="adjective1" name="adjective1" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="adjective2">Adjective:</label>
+      <label class="tooltip"
+        >Definition: Any member of a class of words that modify nouns and
+        pronouns, primarily by describing a particular quality of the word they
+        are modifying, as wise in a wise grandmother, or perfect in a perfect
+        score, or handsome in He is extremely handsome.
+      </label>
+      <input type="text" id="adjective2" name="adjective2" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="noun1">Noun:</label>
+      <label class="tooltip"
+        >Definition: Nouns are often described as referring to persons, places,
+        things, states, or qualities.</label
+      >
+      <input type="text" id="noun1" name="noun1" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="noun2">Noun:</label>
+      <label class="tooltip"
+        >Definition: Nouns are often described as referring to persons, places,
+        things, states, or qualities.</label
+      >
+      <input type="text" id="noun2" name="noun2" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="plunoun1">Plural Noun:</label>
+      <label class="tooltip"
+        >Definition: Nouns are often described as referring to persons, places,
+        things, states, or qualities.</label
+      >
+      <input type="text" id="plunoun1" name="plunoun1" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="game">Game:</label>
+      <label class="tooltip"
+        >Definition: A form of play or sport, especially a competitive one
+        played according to rules and decided by skill, strength, or
+        luck.</label
+      >
+      <input type="text" id="game" name="game" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="plunoun2">Plural noun:</label>
+      <label class="tooltip"
+        >Definition: Nouns are often described as referring to persons, places,
+        things, states, or qualities.</label
+      >
+      <input type="text" id="plunoun2" name="plunoun2" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="verbing1">Verb ending in 'ing':</label>
+      <label class="tooltip"
+        >Definition: A word used to describe an action, state, or occurrence,
+        and forming the main part of the predicate of a sentence, such as hear,
+        become, happen.</label
+      >
+      <input type="text" id="verbing1" name="verbing1" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="verbing2">Verb ending in 'ing':</label>
+      <label class="tooltip"
+        >Definition: A word used to describe an action, state, or occurrence,
+        and forming the main part of the predicate of a sentence, such as hear,
+        become, happen.</label
+      >
+      <input type="text" id="verbing2" name="verbing2" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="plunoun3">Plural noun:</label>
+      <label class="tooltip"
+        >Definition: Nouns are often described as referring to persons, places,
+        things, states, or qualities.</label
+      >
+      <input type="text" id="plunoun3" name="plunoun3" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="verbing3">Verb ending in 'ing':</label>
+      <label class="tooltip"
+        >Definition: A word used to describe an action, state, or occurrence,
+        and forming the main part of the predicate of a sentence, such as hear,
+        become, happen.</label
+      >
+      <input type="text" id="verbing3" name="verbing3" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="noun4">Noun:</label>
+      <label class="tooltip"
+        >Definition: Nouns are often described as referring to persons, places,
+        things, states, or qualities.</label
+      >
+      <input type="text" id="noun4" name="noun4" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="plant">Plant:</label>
+      <label class="tooltip"
+        >Definition: A bush, or young tree; a sapling; hence, a stick or
+        staff.</label
+      >
+      <input type="text" id="plant" name="plant" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="bodypart">Body part:</label>
+      <label class="tooltip"
+        >Definition: Any part of an organism such as an organ or
+        extremity</label
+      >
+      <input type="text" id="bodypart" name="bodypart" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="country">Country:</label>
+      <label class="tooltip">Definition: a state or nation.</label>
+      <input type="text" id="country" name="country" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label for="verbing4">Verb ending in 'ing':</label>
+      <label class="tooltip"
+        >Definition: A word used to describe an action, state, or occurrence,
+        and forming the main part of the predicate of a sentence, such as hear,
+        become, happen.</label
+      >
+      <input type="text" id="verbing4" name="verbing4" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="adjective">Adjective:</label>
+      <label class="tooltip"
+        >Definition: Any member of a class of words that modify nouns and
+        pronouns, primarily by describing a particular quality of the word they
+        are modifying, as wise in a wise grandmother, or perfect in a perfect
+        score, or handsome in He is extremely handsome.
+      </label>
+      <input type="text" id="adjective" name="adjective" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="number">Number:</label>
+      <label class="tooltip">Definition: A quantity or amount.</label>
+      <input type="text" id="number" name="number" /><br /><br />
+    </div>
+    <div class="label-and-input">
+      <label class="label-tag" for="plunoun4">Plural Noun:</label>
+      <label class="tooltip"
+        >Definition: Nouns are often described as referring to persons, places,
+        things, states, or qualities.</label
+      >
+      <input type="text" id="plunoun4" name="plunoun4" /><br /><br />
+    </div>
+  </form>
+</body>
+{% else %}
+<body>
+  <h2>Welcome to</h2>
+  <h1>MadLibs</h1>
+  <form action="{{ url_for('handle_name_submit') }}" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" /><br /><br />
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+{% endif %}

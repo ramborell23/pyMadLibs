@@ -20,6 +20,17 @@
 <body>
   <h1>Bronx Tale</h1>
 <label>You must fill in all inputs</label>
+  <form action="{{ url_for('handle_bronx_tale')}}" method="post">
+
+<div class="label-and-input">
+      <label class="label-tag" for="noun">Noun:</label>
+      <label class="tooltip"
+        >Definition: Nouns are often described as referring to persons, places,
+        things, states, or qualities.</label
+      >
+      <input type="text" id="noun" name="noun" /><br /><br />
+    </div>
+    </form>
 </body>
 
 {% endif %}

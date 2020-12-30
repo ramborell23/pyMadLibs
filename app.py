@@ -6,12 +6,21 @@ app = Flask(__name__)
 def hello(name=None):
     # form_name = request.form['name']
     return render_template('hello.html')
-
-
+ 
 @app.route('/handle_name_submit', methods=['POST'])
 def handle_name_submit():
     form_name = request.form['name']
     return render_template('hello.html', name=form_name)
+
+
+@app.route('/handle_bronx_tale', methods=['POST'])
+def handle_bronx_tale():
+    # form_noun = request.form['noun']
+    forward_message = "Moving Forward..."
+
+    return render_template('bronxtale.html', noun=forward_message)
+
+
 
 
 @app.route('/handle_madlibs_data', methods=['POST'])

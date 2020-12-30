@@ -3,6 +3,15 @@ body {
     margin-bottom: 100px;
 }
 
+button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto;
+    padding: 10%;
+}
+
 form div:nth-child(odd) {
     background: red;
     width: 50%;
@@ -18,7 +27,7 @@ label.tooltip {
     padding: 15px;
     display: none;
     border-radius: 25px;
-    position:absolute;
+    position: absolute;
     float: right;
     left: 520px;
     width: 30%;
